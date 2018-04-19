@@ -1,4 +1,6 @@
-#include "HeartbeatPing.h"
+#ifndef HEARTBEATPING_H
+#define HEARTBEATPING_H
+
 #include "SCon.h"
 #include <list>
 
@@ -7,7 +9,7 @@
 
 class HeartbeatPing {
 	public:
-		HeartbeatPing(std::list<SCon> ipList);
+		HeartbeatPing(std::list<SCon>);
 		void runClass();
 		void stopClass();
 		bool isClassTerminal();
@@ -18,4 +20,4 @@ class HeartbeatPing {
 		bool classTerminal;	
 };
 		
-
+#endif
