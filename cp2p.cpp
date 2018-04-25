@@ -20,6 +20,7 @@ void error(const char *msg) {
 
 int main(int argc, char *argv[]) {
 	//set variables for creation of server
+	printf("a feeling of calm washes over you\n");
 	int inSock, outSock;
 	socklen_t clilen;
 	char buffer[1024];
@@ -36,7 +37,7 @@ int main(int argc, char *argv[]) {
 	//set simple parameters 
 	ipHere.sin_family = AF_INET;
 	ipHere.sin_addr.s_addr = INADDR_ANY;
-	ipHere.sin_port = PORT;
+	ipHere.sin_port = htons(PORT);
 
 	if(bind(inSock, (struct sockaddr *) &ipHere, sizeof(ipHere)) < 0) {
 		error("ekans");
